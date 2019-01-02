@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<h2> Plot points </h2>
+<ul>
+    {% for position, pnl in plot %}
+        <li>
+            <p>{{ position }}</p> {{ pnl }}
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

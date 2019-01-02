@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithm</title>
+</head>
+<body>
+<h1>Algorithm List</h1>
+{% if algorithm_list %}
+    <ul>
+        {% for algorithm in algorithm_list %}
+            <li>
+                <a href="{% url 'algorithm_detail' algorithm.id %}">{{ algorithm.name }}</a> {{ algorithm.average_pnl }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no Algorithms.</p>
+{% endif %}
+</body>
+</html>

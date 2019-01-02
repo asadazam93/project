@@ -1,0 +1,14 @@
+{% load static i18n crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Algorithm</title>
+</head>
+<body>
+    <div>
+        {% crispy form %}
+        <a href="{% url 'algorithm_list' %}"><button>Algo table</button></a>
+    </div>
+</body>
+</html>
