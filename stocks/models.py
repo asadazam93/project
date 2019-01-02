@@ -15,11 +15,13 @@ class Algorithm(models.Model):
     def average_pnl(self):
         url = PRICES_API_URL.replace('ticker', self.ticker)
         response = requests.get(url)
-        prices = []
-        for item in response.json():
-            prices.append(item.get('close'))
-        positions, PnL = algo_result(self.signal, self.trade, prices)
-        return sum(PnL)/len(PnL)
+        if response.status_code == 200:
+            prices = []
+            for item in response.json():
+                prices.append(item.get('close'))
+            positions, PnL = algo_result(self.signal, self.trade, prices)
+            return sum(PnL)/len(PnL)
+        return 0
 
     def __str__(self):
         return self.name
