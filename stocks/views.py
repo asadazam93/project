@@ -2,6 +2,7 @@ from django.views.generic import CreateView, ListView, DetailView
 from stocks.models import Algorithm
 from stocks.forms import AlgorithmForm
 import requests
+from django.urls import reverse
 
 from project.settings import PRICES_API_URL
 from stocks.utils import algo_result
@@ -14,6 +15,9 @@ class AlgorithmCreateView(CreateView):
     model = Algorithm
     form_class = AlgorithmForm
     success_url = 'algorithm'
+
+    def get_success_url(self):
+        return reverse("algorithm_list")
 
 
 class AlgorithmListView(ListView):
