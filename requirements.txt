@@ -11,7 +11,7 @@ django-crispy-forms==1.7.2
 django-suit==0.2.26
 django-utils2==2.5.0
 django-waffle==0.15.0
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 factory-boy==2.11.1
 Faker==1.0.0
