@@ -16,7 +16,7 @@ djangorestframework-jwt==1.11.0
 factory-boy==2.11.1
 Faker==1.0.0
 idna==2.8
-numpy==1.15.4
+numpy==1.22.0
 gunicorn==19.9.0
 pbr==5.1.1
 phonenumbers==8.10.0
